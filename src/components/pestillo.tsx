@@ -3,15 +3,16 @@ import React from 'react';
 const Pestillo = ({ pestillo, valPestillo, cambiarPestillo }: { pestillo: number, valPestillo: number, cambiarPestillo: Function}) => {
     return (
         <div
-            className='pesillo'
+            className='pestillo'
             style={{
                 display: 'block',
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: 'lightgray',
-                width: '80px',
-                height: '150px',
-                padding: 'auto'
+                //backgroundColor: 'lightgray',
+                width: '40px',
+                height: '95px',
+                padding: 'auto',
+                borderRadius: '5px'
         }}>
             <div
                 onClick={() => cambiarPestillo(pestillo, 1)}
@@ -19,14 +20,16 @@ const Pestillo = ({ pestillo, valPestillo, cambiarPestillo }: { pestillo: number
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    color: 'black',
-                    width: '40px',
-                    height: '30px',
-                    backgroundColor: 'brown',
+                    color: '#BC8A5F',
+                    width: '20px',
+                    height: '15px',
+                    fontSize: '20px',
+                    //backgroundColor: 'brown',
                     margin: '10px auto 5px auto',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    textShadow: '-1px 1px 3px black'
             }}>
-                +
+                ⮝
             </div>
 
             <div style={{
@@ -34,14 +37,16 @@ const Pestillo = ({ pestillo, valPestillo, cambiarPestillo }: { pestillo: number
                 justifyContent: 'center',
                 alignItems: 'center',
                 margin: 'auto',
-                width: '50px',
-                height: '60px',
-                backgroundColor: 'white',
+                width: '25px',
+                height: '30px',
+                backgroundColor: '#E7BC91',
                 color: 'black',
-                fontSize: '60px'
+                fontSize: '30px',
+                boxShadow: 'inset 0 0 5px black'
             }}>
                 {valPestillo}
             </div>
+            
 
             <div
                 onClick={() => cambiarPestillo(pestillo, -1)}
@@ -49,14 +54,16 @@ const Pestillo = ({ pestillo, valPestillo, cambiarPestillo }: { pestillo: number
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    color: 'black',
-                    width: '40px',
-                    height: '30px',
-                    backgroundColor: 'brown',
-                    margin: '10px auto 5px auto',
-                    cursor: 'pointer'
+                    color: '#BC8A5F',
+                    width: '20px',
+                    height: '15px',
+                    fontSize: '20px',
+                    //backgroundColor: 'brown',
+                    margin: '5px auto 10px auto',
+                    cursor: 'pointer',
+                    textShadow: '-1px 1px 3px black'
             }}>
-                -
+                ⮟
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 import { Button } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import brassTexture from '../images/brass_texture.jpg';
 
 const OpenLockButton : React.FC<{
     open: boolean
@@ -10,24 +11,38 @@ const OpenLockButton : React.FC<{
         {
             props.open ? (
                 <Link to='/2'>
-                    <Button
-                        variant='contained'
+                    <div
                         style={{
-                            backgroundColor: 'black',
-                            color: 'white'
+                            backgroundImage: `url(${brassTexture})`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                            backgroundSize: 'cover',
+                            color: 'white',
+                            width: '50px',
+                            height: '100px',
+                            boxShadow: 'black -3px 3px',
+                            cursor: 'pointer',
+                            borderRadius: '100%'
                     }}>
-                        <b>Página 2</b>
-                    </Button>
+                        
+                    </div>
                 </Link>
             ) : (
-                <Button
-                    variant='contained'
+                <div
                     style={{
-                        backgroundColor: 'black',
-                        color: 'white'
+                        backgroundImage: `url(${brassTexture})`,
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        color: 'white',
+                        width: '50px',
+                        height: '100px',
+                        boxShadow: 'black -3px 3px',
+                        cursor: 'pointer',
+                        borderRadius: '100%'
                 }}>
-                    <b>Página 2</b>
-                </Button>
+                            
+                </div>
             )
         }
         </div>
