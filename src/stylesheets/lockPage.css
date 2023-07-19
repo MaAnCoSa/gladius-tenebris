@@ -1,0 +1,23 @@
+@keyframes openCircleAnim {
+    50% {
+        width: 35px;
+        height: 35px;
+        transform: translateX(2.5px)
+    }
+    100% {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@keyframes idle {
+    100% {}
+}
+
+.lock-button:hover {
+    transform: translateX(-4px);
+}
+
+.no-strap {
+    display: none;
+}

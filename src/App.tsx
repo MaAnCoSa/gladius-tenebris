@@ -10,6 +10,7 @@ function App() {
     <div
       style={{
         backgroundColor: 'lightgray',
+        margin: '-10px',
         width: '100vw',
         height: '100vh',
         display: 'flex',

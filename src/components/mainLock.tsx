@@ -1,14 +1,10 @@
-import { Typography, Button } from '@mui/material';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import OpenLockButton from './openLockButton';
 import Pestillo from './pestillo';
-import leatherTexture from '../images/leather_texture.jpg';
 import brassTexture from '../images/brass_texture.jpg';
+import '../stylesheets/lockPage.css';
 
-
-const MainLock = () => {
-    const [open, setOpen] = useState<boolean>(false);
+const MainLock = ({ setOpen }: { setOpen: Function }) => {
 
     const [pestillo1, setPestillo1] = useState<number>(0);
     const [pestillo2, setPestillo2] = useState<number>(0);
@@ -64,12 +60,13 @@ const MainLock = () => {
     };
 
     const revisarCombinacion = () => {
-        return (
+        const open: boolean =
             pestillo1 == 1
             && pestillo2 == 2
             && pestillo3 == 3
-            && pestillo4 == 4
-        );
+            && pestillo4 == 4;
+        open ? setOpen(true) : setOpen(false);
+        return open;
     }
 
     return (
@@ -94,12 +91,17 @@ const MainLock = () => {
                 borderBottomLeftRadius: '50px',
                 borderTopRightRadius: '50px',
                 borderBottomRightRadius: '50px',
-                boxShadow: 'black -2px 2px'
-
+                boxShadow: 'black -2px 2px 5px'
             }}>
 
-                <div>
-                    <OpenLockButton open={revisarCombinacion()} />
+                <div
+                    className='lock-button'
+                    style={{
+                        position: 'absolute',
+                        marginRight: '220px',
+                        transition: 'transform 0.3s ease 0s',
+                }}>
+                    <OpenLockButton open={revisarCombinacion} />
                 </div>
             
                 <Pestillo pestillo={1} valPestillo={pestillo1} cambiarPestillo={cambiarPestillo} />
