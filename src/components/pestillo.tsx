@@ -27,7 +27,8 @@ const Pestillo = ({ pestillo, valPestillo, cambiarPestillo }: { pestillo: number
                     //backgroundColor: 'brown',
                     margin: '10px auto 5px auto',
                     cursor: 'pointer',
-                    textShadow: '-1px 1px 3px black'
+                    textShadow: '-1px 1px 3px black',
+                    userSelect: 'none'
             }}>
                 ⮝
             </div>
@@ -42,7 +43,8 @@ const Pestillo = ({ pestillo, valPestillo, cambiarPestillo }: { pestillo: number
                 backgroundColor: '#E7BC91',
                 color: 'black',
                 fontSize: '30px',
-                boxShadow: 'inset 0 0 5px black'
+                boxShadow: 'inset 0 0 5px black',
+                userSelect: 'none'
             }}>
                 {valPestillo}
             </div>
@@ -61,7 +63,8 @@ const Pestillo = ({ pestillo, valPestillo, cambiarPestillo }: { pestillo: number
                     //backgroundColor: 'brown',
                     margin: '5px auto 10px auto',
                     cursor: 'pointer',
-                    textShadow: '-1px 1px 3px black'
+                    textShadow: '-1px 1px 3px black',
+                    userSelect: 'none'
             }}>
                 ⮟
             </div>

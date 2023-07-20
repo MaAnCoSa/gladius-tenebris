@@ -87,7 +87,7 @@ const LockPage = () => {
                             width: '150px',
                             height: '80px',
                             //backgroundColor: 'blue',
-                            marginRight: '-15px',
+                            marginRight: '-10px',
                             marginLeft: 'auto'
                         }}>
 
@@ -102,7 +102,8 @@ const LockPage = () => {
                                     fontSize: '22px',
                                     width: '80px',
                                     height: '70px',
-                                    textShadow: 'black 1px 1px 3px'
+                                    textShadow: 'black 1px 1px 20px',
+                                    userSelect: 'none'
                             }}>
                                 <b>OPEN</b>
                             </div>
@@ -112,13 +113,14 @@ const LockPage = () => {
                                 <div
                                     className='openCircle'
                                     style={{
-                                        border: 'solid 5px white',
+                                        backgroundColor: 'white',
+                                        opacity: '65%',
                                         width: '30px',
                                         height: '30px',
                                         borderRadius: '100%',
-                                        boxShadow: 'black 0.5px 0.5px 5px',
+                                        boxShadow: 'black 0.5px 0.5px 20px',
                                         cursor: 'pointer',
-                                        animation: 'openCircleAnim 1.5s infinite'
+                                        animation: 'openCircleAnim 2s infinite ease'
                                 }} />
                             </Link>
                                 
